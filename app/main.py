@@ -39,11 +39,16 @@ def start():
             initialize your snake state here using the
             request's data if necessary.
     """
+    # board_height = data.board.height
+    # board_width = data.board.width
+
     print(json.dumps(data))
 
-    color = "#00FF00"
+    color = "#ffbf00"
+    head_type = 'shades'
+    tail_type = 'small-rattle'
 
-    return start_response(color)
+    return start_response(color, head_type, tail_type)
 
 
 @bottle.post('/move')
